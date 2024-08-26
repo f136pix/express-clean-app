@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  express-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: express
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password!
+    ports:
+      - "5436:5432"
+    volumes:
+      - pg-expressdata:/var/lib/postgresql/data
+  
+  dotnet-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: dotnet
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: password!
+    ports:
+      - "5435:5432"
+    volumes:
+      - pg-dotnetdata:/var/lib/postgresql/data
+  
+  
+  express-api:
+    build: .
+    command: sh -c "while !</dev/tcp/db/5432; do sleep 1; done; npm start"
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: admin
+      DB_PASSWORD: password!
+      DB_NAME: express
+    ports:
+      - "5000:5000"
+    depends_on:
+      - express-db
+
+volumes:
+  pg-expressdata:
+  pg-dotnetdata:
