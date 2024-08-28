@@ -2,6 +2,7 @@ import {Request, Response, NextFunction} from "express";
 import {NotFoundError} from "../exceptions/NotFoundError";
 import {ValidationError} from "../exceptions/ValidationError";
 import {ErrorType} from "../exceptions/ErrorType";
+import {UnauthorizedError} from "../exceptions/UnauthorizedError";
 
 type ResponseBody = {
     message: string;
@@ -29,13 +30,18 @@ export const errorHandler = (
     }
 
     switch (err !== null) {
-        case err instanceof ValidationError: 
+        case err instanceof ValidationError:
             res.status(400);
             const error = err as ValidationError;
             responseBody.message = error.message
             responseBody.error = error.error
             break;
-        
+
+        case err instanceof UnauthorizedError:
+            res.status(401);
+            responseBody.message = err.message;
+            break;
+
         case err instanceof NotFoundError:
             res.status(404);
             responseBody.message = err.message;

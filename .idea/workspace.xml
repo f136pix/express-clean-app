@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a52dcb17-74cc-4098-93b1-11fad1f1c05b" name="Changes" comment="" />
+    <list default="true" id="a52dcb17-74cc-4098-93b1-11fad1f1c05b" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/express/prisma/schema.prisma" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v1/_common/middlewares/schemaValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/_common/middlewares/schemaValidator.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v1/auth/authRouter.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/auth/authController.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v1/auth/authService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/auth/authService.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v1/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/contracts/auth/CreateUser.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/contracts/auth/CreateUser.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,6 +25,9 @@
       <set />
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -25,20 +36,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Makefile Target.run-dbs.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/home/filipe/Desktop/Projects/dotnet-express-template",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "/home/filipe/Desktop/Projects/dotnet-express-template/express/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Makefile Target.run-dbs.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/filipe/Desktop/Projects/dotnet-express-template&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/home/filipe/Desktop/Projects/dotnet-express-template/express/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/express/src/api/v1/auth" />
@@ -74,7 +86,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1724432421357</updated>
-      <workItem from="1724432422463" duration="25112000" />
+      <workItem from="1724432422463" duration="25599000" />
+      <workItem from="1724701302848" duration="1023000" />
     </task>
     <servers />
   </component>

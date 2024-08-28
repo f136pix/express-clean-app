@@ -7,14 +7,6 @@ interface ValidationError {
     type: string;
 }
 
-interface JoiError {
-    status: string;
-    error: {
-        original: unknown;
-        details: ValidationError[];
-    };
-}
-
 const supportedMethods = ["post", "put", "patch", "delete"];
 
 const validationOptions = {
