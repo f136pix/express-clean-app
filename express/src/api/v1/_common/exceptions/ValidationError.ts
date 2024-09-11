@@ -1,7 +1,7 @@
 import Joi, {ValidationErrorItem} from "joi";
 
 class ValidationError extends Error {
-    error
+    error;
 
     constructor(message: string, errors: Joi.ValidationErrorItem[]) {
         super(message);

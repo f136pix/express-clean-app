@@ -1,5 +1,7 @@
-import 'dotenv/config';
 import jwt from 'jsonwebtoken';
+
+import 'dotenv/config';
+
 class jwtService {
     private secret: string = process.env.JWT_SECRET || 'secret';
 
@@ -10,10 +12,18 @@ class jwtService {
     verify(token: string): boolean {
         try {
             jwt.verify(token, this.secret);
-            return true
+            return true;
         } catch (error) {
             // throw new Error('Invalid token');
-            return false
+            return false;
+        }
+    }
+
+    decode(token: string): any {
+        try {
+            return jwt.verify(token, this.secret);
+        } catch (error) {
+            return false;
         }
     }
 }

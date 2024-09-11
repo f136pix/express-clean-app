@@ -1,8 +1,10 @@
-import {Request, Response, NextFunction} from "express";
-import {NotFoundError} from "../exceptions/NotFoundError";
-import {ValidationError} from "../exceptions/ValidationError";
+import {NextFunction,Request, Response} from "express";
+
 import {ErrorType} from "../exceptions/ErrorType";
+import {NotFoundError} from "../exceptions/NotFoundError";
 import {UnauthorizedError} from "../exceptions/UnauthorizedError";
+import {ValidationError} from "../exceptions/ValidationError";
+import {BadRequestError} from "../exceptions/BadRequestError";
 
 type ResponseBody = {
     message: string;
@@ -29,12 +31,16 @@ export const errorHandler = (
         }
     }
 
+    if(err !== null) {
+        console.log(err);
+    }
+
     switch (err !== null) {
         case err instanceof ValidationError:
             res.status(400);
             const error = err as ValidationError;
-            responseBody.message = error.message
-            responseBody.error = error.error
+            responseBody.message = error.message;
+            responseBody.error = error.error;
             break;
 
         case err instanceof UnauthorizedError:
@@ -47,6 +53,11 @@ export const errorHandler = (
             responseBody.message = err.message;
             break;
 
+        case err instanceof BadRequestError:
+            res.status(422);
+            responseBody.message = err.message;
+            break;
+
         default :
             res.status(500);
             responseBody.message = 'Something went wrong';
@@ -55,4 +66,4 @@ export const errorHandler = (
 
 
     res.json(responseBody);
-}
+};

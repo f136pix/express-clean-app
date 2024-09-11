@@ -25,7 +25,7 @@ async function main() {
                 ],
             },
         }
-    })
+    });
     
     await prisma.permission.create({
         data: {
@@ -36,19 +36,8 @@ async function main() {
                 ],
             },
         }
-    })
-    
-    await prisma.permission.create({
-        data: {
-            name: 'update:items',
-            roles: {
-                connect: [
-                    {id: adminRole.id},
-                ],
-            },
-        }
-    })
-    
+    });
+
     await prisma.permission.create({
         data: {
             name: 'delete:items',
@@ -58,7 +47,29 @@ async function main() {
                 ],
             },
         }
-    })
+    });
+
+    await prisma.permission.create({
+        data: {
+            name: 'update:items',
+            roles: {
+                connect: [
+                    {id: adminRole.id},
+                ],
+            },
+        }
+    });
+
+    await prisma.permission.create({
+        data: {
+            name: 'update:users',
+            roles: {
+                connect: [
+                    {id: adminRole.id},
+                ],
+            },
+        }
+    });
 }
 
 main()

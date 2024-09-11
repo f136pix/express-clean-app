@@ -1,12 +1,40 @@
-import {NotFoundError} from "../_common/exceptions/NotFoundError";
-import prisma from "../../../prismaClient";
-import {CreateUserContract} from "../../../contracts/auth/RegisterUserRequest";
 import {User} from "@prisma/client";
+import bcrypt from 'bcrypt';
+
+import {LoginUserContract} from "../../../contracts/auth/LoginUserContract";
+import {CreateUserContract} from "../../../contracts/auth/RegisterUserRequest";
+import prisma from "../../../prismaClient";
+import {NotFoundError} from "../_common/exceptions/NotFoundError";
+import {UnauthorizedError} from "../_common/exceptions/UnauthorizedError";
 import jwtService from "../_common/services/jwtService";
+import {UpdateUserRoleRequest} from "../../../contracts/auth/UpdateUserRoleRequest";
+import {BadRequestError} from "../_common/exceptions/BadRequestError";
 
 class authServiceClass {
-    login() {
-        return 'Login successful';
+    async login(data: LoginUserContract): Promise<{ user: User, jwt: string }> {
+        const user = await prisma.user.findUnique({
+            where: {
+                email: data.email
+            }, include : {
+                role: true
+            }
+        });
+
+        if (!user) {
+            throw new NotFoundError('User with this email does not exists');
+        }
+
+        const isValidPassword = await bcrypt.compare(data.password, user.password);
+        if (!isValidPassword) {
+            throw new UnauthorizedError('Invalid password');
+        }
+
+        const jwt = jwtService.sign({id: user.id, role: user.role.name}, '1h');
+
+        return {
+            user: user,
+            jwt: jwt
+        };
     }
 
     async register(data: CreateUserContract): Promise<{ user: User, jwt: string }> {
@@ -14,19 +42,22 @@ class authServiceClass {
             where: {
                 email: data.email
             }
-        })
+        });
 
         if (user) {
             throw new NotFoundError('User already exists');
         }
 
-        const roleName = "user"
+        const roleName = "user";
+
+        const saltRounds = 10;
+        const hashedPassword = await bcrypt.hash(data.password, saltRounds);
         
         const CreatedUser = await prisma.user.create({
             data: {
                 email: data.email,
                 name: data.name,
-                password: data.password,
+                password: hashedPassword,
                 role: {
                     connect: {
                         name: roleName
@@ -35,25 +66,67 @@ class authServiceClass {
             },
         });
         
-        const jwt = jwtService.sign({id: CreatedUser.id, role: roleName}, '1h')
+        const jwt = jwtService.sign({id: CreatedUser.id, role: roleName}, '1h');
 
         return {
             user: CreatedUser,
             jwt: jwt
-        }
+        };
     }
 
-    test(user?: any) {
+    async updateRole (data : UpdateUserRoleRequest) : Promise<User> {
+        const role = await prisma.role.findUnique({
+            where: {
+                name: data.role
+            }
+        })
 
-        throw new NotFoundError("NotFound")
+        if(!role) {
+            throw new BadRequestError("The provided Role does not exists")
+        }
 
-        // throw new Error("teste")
-        const ola: any[] = []
-        console.log(ola[100].name)
+        const user = await prisma.user.findUnique({
+            where: {
+                id: data.id
+            }
+        })
 
+        if(!user) {
+            throw new BadRequestError("User with the provided Id does not exists")
+        }
 
-        return "ola"
-        // throw new Error('There was an error in the test route.');
+        const updatedUser = await prisma.user.update({
+            where: {
+                id: data.id,
+            },
+            data: {
+                roleId: role.id
+            }
+        });
+
+        return updatedUser
+    }
+
+    async deleteUser (id: number) : Promise<User> {
+        const user = await prisma.user.findUnique({
+            where: {
+                id: id
+            }
+        })
+
+        if(!user) {
+            throw new NotFoundError("User with the provided Id does not exists")
+        }
+
+        // Performs soft delete
+        return await prisma.user.update({
+            where: {
+                id: id
+            },
+            data: {
+                deleted: true
+            }
+        })
     }
 }
 

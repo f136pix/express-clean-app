@@ -17,11 +17,13 @@ model User {
   id       Int     @id @default(autoincrement())
   email    String  @unique
   name     String
-  password String 
+  password String
   roleId   Int
+  deleted  Boolean @default(false)
   role     Role    @relation(fields: [roleId], references: [id])
+  items    Item[] // One-to-many relation (one user can have many items)
 
-  @@index([email])
+  @@index([email, deleted])
 }
 
 model Role {
@@ -35,4 +37,12 @@ model Permission {
   id    Int    @id @default(autoincrement())
   name  String @unique
   roles Role[]
+}
+
+model Item {
+  id        Int      @id @default(autoincrement())
+  name      String
+  userId    Int?
+  user      User?    @relation(fields: [userId], references: [id])
+  createdAt DateTime @default(now())
 }

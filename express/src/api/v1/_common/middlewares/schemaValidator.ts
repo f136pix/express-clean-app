@@ -1,6 +1,7 @@
 import {RequestHandler} from "express";
-import {ValidationError as ValidationThrowable} from "../exceptions/ValidationError";
 import Joi, {override} from "joi";
+
+import {ValidationError as ValidationThrowable} from "../exceptions/ValidationError";
 
 interface ValidationError {
     message: string;
