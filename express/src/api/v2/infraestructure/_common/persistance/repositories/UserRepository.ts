@@ -10,25 +10,30 @@ class UserRepository {
     }
 
     async addAsync(user: User): Promise<User> {
-         await this.prisma.user.create({
+
+         const createdUser = await this.prisma.user.create({
             data: {
                 name: user.name,
                 email: user.email,
                 password: user.password,
-                roleId: user.role.id,
+                roleId: user.role!.id,
                 deleted: false,
             }
         });
 
-         return user;
+         return User.toDomain(createdUser);
     }
 
-    // // Find a user by email
-    // async findByEmail(email: string): Promise<User | null> {
-    //     return this.prisma.user.findUnique({
-    //         where: { email }
-    //     });
-    // }
+    // Find a user by email
+    async findByEmailAsync(email: string): Promise<User | null> {
+        const prismaUser = await this.prisma.user.findUnique({
+            where: { email }
+        })
+
+        if(!prismaUser) return null;
+
+        return User.toDomain(prismaUser);
+    }
     //
     // // Find a user by ID
     // async findById(id: number): Promise<User | null> {

@@ -1,14 +1,18 @@
-import {EventBus} from "../../../infraestructure/_common/interfaces/EventBus";
-import {Item} from "../../../domain/UserAggregate/Item";
-import {IDomainEventSubscriber} from "../../../infraestructure/_common/interfaces/IDomainEventSubscriber";
+import {IDomainEventSubscriber} from "../../_common/interfaces/IDomainEventSubscriber";
 import {UserCreatedDomainEvent} from "../../../domain/UserAggregate/Events/UserCreated";
-import {DomainEvent} from "../../../infraestructure/_common/models/DomainEvent";
-import {IDomainEvent} from "../../../infraestructure/_common/interfaces/IDomainEvent";
+import {IDomainEvent} from "../../../domain/_common/interfaces/IDomainEvent";
+import IPublisheableEvent from "../../_common/interfaces/IPublisheableEvent";
+import IMessageBrokerPublisher from "../../_common/interfaces/IMessageBrokerPublisher";
+import RabbitMqEventPublisher from "../../../infraestructure/_common/models/RabbitMqEventPublisher";
+
 
 export class SendEmailOnUserCreated
     implements IDomainEventSubscriber<UserCreatedDomainEvent>
 {
+    private readonly publisher : IMessageBrokerPublisher;
     constructor( ) {
+
+        this.publisher = RabbitMqEventPublisher;
     }
 
     subscribedTo(): Array<IDomainEvent> {
@@ -18,15 +22,15 @@ export class SendEmailOnUserCreated
     async on(domainEventPayload: UserCreatedDomainEvent) {
         const { userId, name, email } = domainEventPayload;
 
-        console.log("-------------> ON EVENT <--------------");
-        console.log(email);
+        // Pass the information to the broker so emailSenderService uses it
+        const sendEmailEvent : IPublisheableEvent = {
+            name: name,
+            email: email
+        }
 
-        // ... (any asynchronous operations with await)
+        await this.publisher.publishAsync(sendEmailEvent, "send.email");
 
-        return Promise.resolve(); // Resolve the promise
-        // Get user email from the userId received
-        // const userEmail = await this.userRepository.getUserEmailById(userId);
-        // Send the user an email with a reminder of the item left in the cart
-        // await this.marketingEmailSender.sendMissingPurchaseEmail(userEmail, item);
+        return Promise.resolve();
+
     }
 }

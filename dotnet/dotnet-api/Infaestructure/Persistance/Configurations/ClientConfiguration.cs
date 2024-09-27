@@ -21,5 +21,9 @@ public class ClientConfiguration : IEntityTypeConfiguration<Client>
             .HasMaxLength(100);
 
         builder.Property(c => c.Password);
+
+        builder.HasMany(c => c.Emails)
+            .WithOne(e => e.Client)
+            .HasForeignKey(e => e.ClientId);
     }
 }

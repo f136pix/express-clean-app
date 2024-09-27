@@ -1,4 +1,4 @@
-import {ICommand} from "../../_common/models/ICommand";
+import {ICommand} from "../../_common/interfaces/ICommand";
 
 export class CreateUserCommand implements ICommand {
     name: string;

@@ -1,7 +1,7 @@
-import {DomainEvent} from "../../../infraestructure/_common/models/DomainEvent";
-import {IDomainEvent} from "../../../infraestructure/_common/interfaces/IDomainEvent";
+import {DomainEvent} from "../../DomainEvent";
+import {IDomainEvent} from "../../_common/interfaces/IDomainEvent";
 
-export class UserCreatedDomainEvent extends DomainEvent implements IDomainEvent {
+export class UserCreatedDomainEvent extends DomainEvent {
     public static eventName = 'UserCreated';
     public readonly userId: number;
     public readonly name: string;

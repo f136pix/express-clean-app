@@ -1,10 +1,10 @@
 import {EventEmitter} from 'events';
-import {DomainEvent} from "./DomainEvent";
-import {IDomainEventSubscriber} from "../interfaces/IDomainEventSubscriber";
-import {EventBus} from "../interfaces/EventBus";
+import {DomainEvent} from "../../../domain/DomainEvent";
+import {IDomainEventSubscriber} from "../../../application/_common/interfaces/IDomainEventSubscriber";
+import {IEventBus} from "../../../application/_common/interfaces/IEventBus";
 import {SendEmailOnUserCreated} from "../../../application/auth/events/SendEmailOnUserCreated";
 
-class InMemoryEventBus extends EventEmitter implements EventBus {
+class InMemoryEventBus extends EventEmitter implements IEventBus {
     constructor() {
         super();
 
@@ -16,7 +16,6 @@ class InMemoryEventBus extends EventEmitter implements EventBus {
             console.log(event.eventName)
             const res = this.emit(event.eventName, event)
             // const res = this.emit("OLA", event)
-            console.log("->", res)
         });
     }
 
@@ -24,9 +23,7 @@ class InMemoryEventBus extends EventEmitter implements EventBus {
         subscribers.forEach((subscriber) => {
             subscriber.subscribedTo().forEach((event) => {
                 console.log(event)
-                console.log("--->" , event.eventName)
                 this.on(event.eventName, subscriber.on.bind(subscriber));
-                // this.on("OLA", () => console.log("OLALAOALAO"));
             });
         });
     }
@@ -34,7 +31,7 @@ class InMemoryEventBus extends EventEmitter implements EventBus {
 
 let eventBus: InMemoryEventBus | null = null;
 
-function getEventBus() : EventBus {
+function getEventBus() : IEventBus {
     if (!eventBus) {
         eventBus = new InMemoryEventBus();
         const sendEmailOnUserCreated = new SendEmailOnUserCreated();

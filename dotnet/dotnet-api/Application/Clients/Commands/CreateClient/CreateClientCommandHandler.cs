@@ -1,4 +1,5 @@
-﻿using Application._Common.Exceptions;
+﻿using System.Data;
+using Application._Common.Exceptions;
 using Domain;
 using MediatR;
 using dotnet_api._Common.Interfaces;
@@ -8,23 +9,23 @@ namespace Application.Clients.Commands.CreateClient;
 public class CreateClientCommandHandler : IRequestHandler<CreateClientCommand, Client>
 {
     private readonly IApplicationDbContext _dbContext;
-    private readonly IApplicationReadDbConnection _readDb;
+    private readonly IDapperConnectionFactory _connectionFactory;
 
-    public CreateClientCommandHandler(IApplicationDbContext applicationDbContext, IApplicationReadDbConnection readDb)
+    public CreateClientCommandHandler(IApplicationDbContext applicationDbContext, IDapperConnectionFactory factory, IDapperConnectionFactory connectionFactory)
     {
         _dbContext = applicationDbContext;
-        _readDb = readDb;
+        _connectionFactory = connectionFactory;
     }
 
     public async Task<Client> Handle(CreateClientCommand request, CancellationToken cancellationToken)
     {
         _dbContext.Connection.Open();
         using var transaction = _dbContext.Connection.BeginTransaction();
+        using var connection = _connectionFactory.CreateConnection();
         try
         {
             var sql = @"SELECT * FROM ""Clients"" WHERE ""Name"" = @Name";
-            var client = await _readDb.QueryFirstOrDefaultAsync<Client>(sql, new { Name = request.Name },
-                transaction: transaction, cancellationToken: cancellationToken);
+            var client = await connection.
             
             if (client is not null)
             {

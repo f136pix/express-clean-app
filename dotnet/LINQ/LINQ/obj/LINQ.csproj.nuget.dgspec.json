@@ -1,0 +1,67 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\felipe.cinel\\Desktop\\express-clean-app\\dotnet\\LINQ\\LINQ\\LINQ.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\felipe.cinel\\Desktop\\express-clean-app\\dotnet\\LINQ\\LINQ\\LINQ.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\felipe.cinel\\Desktop\\express-clean-app\\dotnet\\LINQ\\LINQ\\LINQ.csproj",
+        "projectName": "LINQ",
+        "projectPath": "C:\\Users\\felipe.cinel\\Desktop\\express-clean-app\\dotnet\\LINQ\\LINQ\\LINQ.csproj",
+        "packagesPath": "C:\\Users\\felipe.cinel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\felipe.cinel\\Desktop\\express-clean-app\\dotnet\\LINQ\\LINQ\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\felipe.cinel\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dumpify": {
+              "target": "Package",
+              "version": "[0.6.6, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\felipe.cinel\\.dotnet\\sdk\\6.0.418\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

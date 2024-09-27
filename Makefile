@@ -1,14 +1,15 @@
-.PHONY: run-dbs seed-express-db
+.PHONY: run-dbs seed-express-db run-rabbitmq
+
+run-rabbitmq:
+	docker-compose build rabbitmq
 
 build-express-db:
 	@echo "--> Building express-db container <--"
 	docker-compose build express-db
-# 	@if [ $$? -eq 0 ]; then echo "express-db built successfully"; else echo "Error building express-db"; fi
 
 build-dotnet-db:
 	@echo "--> Building dotnet-db container <--"
 	docker-compose build dotnet-db
-# 	@if [ $$? -eq 0 ]; then echo "dotnet-db built successfully"; else echo "Error building dotnet-db"; fi
 
 run-dbs: build-express-db build-dotnet-db
 	@echo "----------------------------------------------------"

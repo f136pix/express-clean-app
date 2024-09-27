@@ -1,6 +1,5 @@
 ﻿using dotnet_api._Common.Interfaces;
 using dotnet_api._Common.Middleware;
-using dotnet_api.Persistance.Connections;
 using dotnet_api.Persistance.Context;
 using Microsoft.EntityFrameworkCore;
 
@@ -30,8 +29,6 @@ public static class DependencyInjection
                 .UseNpgsql(configuration.GetConnectionString("DefaultConnection")!)
         );
         services.AddScoped<IApplicationDbContext>(provider => provider.GetService<ApplicationDbContext>());
-        services.AddScoped<IApplicationWriteDbConnection, ApplicationWriteDbConnection>();
-        services.AddScoped<IApplicationReadDbConnection, ApplicationReadDbConnection>();
         services.AddControllers();
 
         return services;

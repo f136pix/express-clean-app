@@ -14,8 +14,8 @@ public class ApplicationDbContext : DbContext, IApplicationDbContext
 
     public IDbConnection Connection => Database.GetDbConnection();
     public DbSet<Client> Clients { get; set; }
+    public DbSet<Email> Emails { get; set; }
 
-    public DbSet<Company> Companies { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

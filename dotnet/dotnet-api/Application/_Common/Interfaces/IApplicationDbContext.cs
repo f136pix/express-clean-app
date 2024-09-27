@@ -10,6 +10,6 @@ public interface IApplicationDbContext
     public IDbConnection Connection { get; }
     DatabaseFacade Database { get; }
     public DbSet<Client> Clients { get; set; }
-    public DbSet<Company> Companies { get; set; }
+    public DbSet<Email> Emails { get; set; }
     Task<int> SaveChangesAsync(CancellationToken cancellationToken);
 }

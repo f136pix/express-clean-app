@@ -5,90 +5,66 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a52dcb17-74cc-4098-93b1-11fad1f1c05b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Clients/Commands/CreateClient/CreateClientCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Clients/Commands/CreateClient/CreateClientCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Clients/Queries/GetClientById/GetClientByIdQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Clients/Queries/GetClientById/GetClientByIdQueryHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Companies/Commands/CreateCompany/CreateCompanyCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Companies/Commands/CreateCompany/CreateCompanyCommndHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Items/Commands/CreateOrder/CreateOrderCommand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Items/Commands/CreateOrder/CreateOrderCommandHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Exceptions/AlreadyExistsException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Exceptions/NotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Interfaces/IApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Interfaces/IApplicationReadDbConnection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Interfaces/IApplicationWriteDbConnection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/Items/CreateItemRequest.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Brand.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Client.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Company.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Order.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Controllers/ClientsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Controllers/ItemsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Controllers/StoresController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/DependencyInjection.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Infaestructure.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Configurations/ClientConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Configurations/CompanyConfiguration.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Connections/ApplicationReadDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Connections/ApplicationWriteDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Context/ApplicationDbContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/_Common/Middleware/GlobalExceptionHandlingMiddleware.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/_Common/Models/ResponseModel.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/.eslint.cjs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v1/_common/exceptions/BadRequestError.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/_common/middlewares/asyncHandler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/_common/models/IdValueObject.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/application/_common/models/ICommand.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/application/_common/models/IQuery.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/application/auth/commands/CreateUserCommand.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/application/auth/commands/CreateUserCommandHandler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/application/auth/events/SendEmailOnUserCreated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/domain/UserAggregate/Events/UserCreated.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/domain/UserAggregate/Item.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/domain/UserAggregate/Permission.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/domain/UserAggregate/Role.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/domain/UserAggregate/User.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/domain/UserAggregate/UserId.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/interfaces/EventBus.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/interfaces/IDomainEvent.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/interfaces/IDomainEventSubscriber.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/models/DomainEvent.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/models/InMemoryEventBus.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/persistance/repositories/RolesRepository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/persistance/repositories/UserRepository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/auth/controllers/AuthController.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/contracts/auth/LoginUserContract.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/contracts/auth/LoginUserResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/contracts/auth/UpdateUserRoleRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/contracts/items/CreateItemRequest.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/contracts/items/UpdateItemRequest.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Interfaces/IEmailSender.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Email.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Configurations/EmailConfiguration.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/application/_common/interfaces/IMessageBrokerPublisher.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/application/_common/interfaces/IPublisheableEvent.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/exceptions/ErrorOr.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/exceptions/defaultModels/Conflict.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/exceptions/defaultModels/Forbidden.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/exceptions/defaultModels/NotFound.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/exceptions/defaultModels/Success.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/exceptions/defaultModels/Unauthorized.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/exceptions/defaultModels/Unexpected.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/exceptions/defaultModels/Validation.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/middlewares/errorHandler.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/middlewares/schemaValidator.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/models/RabbitMqEventPublisher.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/express/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Application.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Application.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Clients/Queries/GetClientById/GetClientByIdQueryHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Clients/Queries/GetClientById/GetClientByIdQueryHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Companies/Commands/CreateCompany/CreateCompanyCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Companies/Commands/CreateCompany/CreateCompanyCommndHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/DependencyInjection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/DependencyInjection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Items/Commands/CreateOrder/CreateOrderCommand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Items/Commands/CreateOrder/CreateOrderCommandHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Interfaces/IApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Interfaces/IApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Brand.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Company.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Item.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Order.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Controllers/ItemsController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Controllers/StoresController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Configurations/ClientConfiguration.cs" beforeDir="false" afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Configurations/ClientConfiguration.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Configurations/CompanyConfiguration.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Context/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Context/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/.env" beforeDir="false" afterPath="$PROJECT_DIR$/express/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/package-lock.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/express/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/express/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/prisma/migrations/migration_lock.toml" beforeDir="false" afterPath="$PROJECT_DIR$/express/prisma/migrations/migration_lock.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/express/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/prisma/seed.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/prisma/seed.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/_common/exceptions/ValidationError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/_common/exceptions/ValidationError.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/_common/middlewares/asyncHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/_common/middlewares/asyncHandler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/_common/middlewares/errorHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/_common/middlewares/errorHandler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/_common/middlewares/rbacMiddleware.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/_common/middlewares/rbacMiddleware.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/_common/middlewares/schemaValidator.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/_common/middlewares/schemaValidator.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/_common/services/jwtService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/_common/services/jwtService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/auth/authController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/auth/authController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/auth/authService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/auth/authService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/auth/authValidation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/auth/authValidation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/items/itemsController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/items/itemsController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/items/itemsService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/items/itemsService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/items/itemsValidation.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/items/itemsValidation.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/app.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/prismaClient.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/prismaClient.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/terminate.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/terminate.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/_common/middlewares/asyncHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/middlewares/asyncHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/_common/models/IdValueObject.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/domain/_common/models/IdValueObject.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/application/_common/models/ICommand.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/application/_common/interfaces/ICommand.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/application/_common/models/IQuery.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/application/_common/interfaces/IQuery.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/application/auth/commands/CreateUserCommand.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/application/auth/commands/CreateUserCommand.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/application/auth/commands/CreateUserCommandHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/application/auth/commands/CreateUserCommandHandler.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/application/auth/events/SendEmailOnUserCreated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/application/auth/events/SendEmailOnUserCreated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/domain/UserAggregate/Events/UserCreated.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/domain/UserAggregate/Events/UserCreated.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/domain/UserAggregate/User.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/domain/UserAggregate/User.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/domain/UserAggregate/UserId.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/domain/UserAggregate/UserId.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/interfaces/EventBus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/application/_common/interfaces/IEventBus.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/interfaces/IDomainEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/domain/_common/interfaces/IDomainEvent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/interfaces/IDomainEventSubscriber.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/application/_common/interfaces/IDomainEventSubscriber.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/models/DomainEvent.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/domain/DomainEvent.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/models/InMemoryEventBus.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/models/InMemoryEventBus.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/persistance/repositories/UserRepository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/persistance/repositories/UserRepository.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/api/v2/infraestructure/auth/controllers/AuthController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/auth/controllers/AuthController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/express/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/express/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -117,10 +93,11 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;Docker.docker-compose.yml.express-db: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Docker.docker-compose.yml.rabbitmq: Compose Deployment.executor&quot;: &quot;Run&quot;,
     &quot;Makefile Target.run-dbs.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/felipe.cinel/Desktop/express-clean-app/express/src/api/v2/_common/middlewares&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/felipe.cinel/Desktop/express-clean-app/express/src/api/v2/infraestructure/_common/exceptions/defaultModels&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -133,15 +110,16 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express\src\api\v2\infraestructure\_common\exceptions\defaultModels" />
       <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express\src\api\v2\_common\middlewares" />
       <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express\src\api\v2\infraestructure\_common\models" />
-      <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express\src\api\v2\_common\models" />
-      <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express\src\api\v2\domain\UserAggregate" />
-      <recent name="$PROJECT_DIR$/express/src/api/v1/auth" />
-      <recent name="$PROJECT_DIR$/express/src/api/v1" />
+      <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express\src\api\v2\domain\_common\interfaces" />
+      <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express\src\api\v2\application\_common\interfaces" />
+      <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express\src\api\v2\infraestructure\_common\exceptions\BadRequest" />
+      <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express\src\api\v2\infraestructure\_common" />
+      <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express\src\api\v2\domain\_common" />
     </key>
   </component>
   <component name="RunManager" selected="Docker.docker-compose.yml.express-db: Compose Deployment">
@@ -170,6 +148,19 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="docker-compose.yml.rabbitmq: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="rabbitmq" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/express/package.json" />
       <command value="run" />
@@ -183,6 +174,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Docker.docker-compose.yml.express-db: Compose Deployment" />
+        <item itemvalue="Docker.docker-compose.yml.rabbitmq: Compose Deployment" />
         <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
@@ -214,6 +206,19 @@
       <workItem from="1725993470054" duration="3771000" />
       <workItem from="1726075358301" duration="7202000" />
       <workItem from="1726084277522" duration="1162000" />
+      <workItem from="1726087474065" duration="1073000" />
+      <workItem from="1726145997018" duration="2003000" />
+      <workItem from="1726156863519" duration="773000" />
+      <workItem from="1726171005118" duration="1815000" />
+      <workItem from="1726228404112" duration="6427000" />
+      <workItem from="1726236269716" duration="25000" />
+      <workItem from="1726490812862" duration="1215000" />
+      <workItem from="1726512045601" duration="87000" />
+      <workItem from="1726854999379" duration="9755000" />
+      <workItem from="1727092789986" duration="2386000" />
+      <workItem from="1727099300768" duration="58000" />
+      <workItem from="1727353703189" duration="1963000" />
+      <workItem from="1727445677201" duration="10581000" />
     </task>
     <servers />
   </component>
@@ -222,5 +227,16 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/models/RabbitMqEventPublisher.ts</url>
+          <line>3</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

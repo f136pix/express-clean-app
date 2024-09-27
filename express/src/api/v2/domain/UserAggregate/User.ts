@@ -2,9 +2,12 @@ import {UserId} from "./UserId";
 import {Role} from "./Role";
 import {Item} from "./Item";
 
+
+import {User as UserPrisma} from "@prisma/client"; // Import Prisma's Permission type
+
 export class User {
 
-    constructor(id: UserId, name: string, email: string, password: string, role: Role) {
+    constructor(id: UserId, name: string, email: string, password: string, role?: Role) {
         this.id = id;
         this.name = name;
         this.email = email;
@@ -19,8 +22,8 @@ export class User {
     public email: string;
     public password: string;
     public deleted: boolean;
-    public role: Role;
-    public items: Item[] = []
+    public role?: Role;
+    public items?: Item[] = []
 
     public static create(name: string, email: string, password: string, role: Role): User {
         return new User(
@@ -30,6 +33,10 @@ export class User {
             password,
             role
         );
+    }
+
+    public static toDomain(user : UserPrisma) {
+        return new User(UserId.toUserId(user.id),user.name, user.email, user.password, undefined);
     }
 
     public assignRole(role: Role): void {
