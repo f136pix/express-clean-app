@@ -1,0 +1,321 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/filipe/Desktop/express-clean-app/dotnet-api/Infaestructure/Infaestructure.csproj": {}
+  },
+  "projects": {
+    "/home/filipe/Desktop/express-clean-app/dotnet-api/Application/Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/filipe/Desktop/express-clean-app/dotnet-api/Application/Application.csproj",
+        "projectName": "Application",
+        "projectPath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Application/Application.csproj",
+        "packagesPath": "/home/filipe/.nuget/packages/",
+        "outputPath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/filipe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/filipe/Desktop/express-clean-app/dotnet-api/Contracts/Contracts.csproj": {
+                "projectPath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Contracts/Contracts.csproj"
+              },
+              "/home/filipe/Desktop/express-clean-app/dotnet-api/Domain/Domain.csproj": {
+                "projectPath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Domain/Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.132/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/filipe/Desktop/express-clean-app/dotnet-api/Contracts/Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/filipe/Desktop/express-clean-app/dotnet-api/Contracts/Contracts.csproj",
+        "projectName": "Contracts",
+        "projectPath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Contracts/Contracts.csproj",
+        "packagesPath": "/home/filipe/.nuget/packages/",
+        "outputPath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/filipe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.132/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/filipe/Desktop/express-clean-app/dotnet-api/Domain/Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/filipe/Desktop/express-clean-app/dotnet-api/Domain/Domain.csproj",
+        "projectName": "Domain",
+        "projectPath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Domain/Domain.csproj",
+        "packagesPath": "/home/filipe/.nuget/packages/",
+        "outputPath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/filipe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.132/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/filipe/Desktop/express-clean-app/dotnet-api/Infaestructure/Infaestructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/filipe/Desktop/express-clean-app/dotnet-api/Infaestructure/Infaestructure.csproj",
+        "projectName": "Infaestructure",
+        "projectPath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Infaestructure/Infaestructure.csproj",
+        "packagesPath": "/home/filipe/.nuget/packages/",
+        "outputPath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Infaestructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/filipe/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/filipe/Desktop/express-clean-app/dotnet-api/Application/Application.csproj": {
+                "projectPath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Application/Application.csproj"
+              },
+              "/home/filipe/Desktop/express-clean-app/dotnet-api/Contracts/Contracts.csproj": {
+                "projectPath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Contracts/Contracts.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.1.35, )"
+            },
+            "Dapper.Extensions.PostgreSQL": {
+              "target": "Package",
+              "version": "[4.2.5, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.4.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[7.0.6, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.132/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
