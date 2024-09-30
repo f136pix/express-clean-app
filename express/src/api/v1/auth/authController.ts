@@ -1,6 +1,6 @@
 import {response, Router} from 'express';
 
-import {LoginUserContract} from "../../../contracts/auth/LoginUserContract";
+import {LoginUserRequest} from "../../../contracts/auth/LoginUserRequest";
 import {LoginUserResponse} from "../../../contracts/auth/LoginUserResponse";
 import {CreateUserContract} from "../../../contracts/auth/RegisterUserRequest";
 import {RegisterUserResponse} from "../../../contracts/auth/RegisterUserResponse";
@@ -15,7 +15,7 @@ import {User} from "@prisma/client";
 
 const authController = Router();
 
-authController.post<LoginUserContract, MessageResponse<LoginUserResponse>>('/login',
+authController.post<LoginUserRequest, MessageResponse<LoginUserResponse>>('/login',
     schemaValidator(authSignin),
     asyncHandler(async (req: any, res: any) => {
         const ret = await authService.login(req.body);

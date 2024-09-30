@@ -1,4 +1,4 @@
-﻿export type LoginUserContract = {
+﻿export type LoginUserRequest = {
     email: string,
     password: string
 }

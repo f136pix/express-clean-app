@@ -23,7 +23,7 @@ export const errorHandler = (
     res.status(statusCode);
 
     let responseBody: ResponseBody = {
-        message: "message" in err ? err.message : "Something went wrong"
+        message: " "
     };
 
     if (process.env.NODE_ENV === 'development') {
@@ -42,36 +42,37 @@ export const errorHandler = (
         case err instanceof Conflict:
             err = err as Conflict;
             res.status(409);
-            responseBody.message = "Conflict error";
+            responseBody.error = "Conflict error";
             responseBody.message = err.error!;
             break;
         case err instanceof Forbidden:
             err = err as Forbidden;
             res.status(403);
-            responseBody.message = "Forbidden error";
+            responseBody.error = "Forbidden error";
             responseBody.message = err.error!;
             break;
         case err instanceof NotFound:
             err = err as NotFound;
             res.status(404);
-            responseBody.message = "Not found error";
+            responseBody.error = "Not found error";
             responseBody.message = err.error!;
             break;
         case err instanceof Unauthorized:
             err = err as Unauthorized;
             res.status(401);
-            responseBody.message = "Unauthorized error";
+            responseBody.error = "Unauthorized error";
             responseBody.message = err.error!;
             break;
         case err instanceof Unexpected:
             err = err as Unexpected;
             res.status(500);
-            responseBody.message = "Unexpected error";
+            responseBody.error = "Unexpected error";
             responseBody.message = err.error!;
             break;
         default:
             res.status(500);
-            responseBody.message = 'Something went wrong';
+            console.log(err);
+            responseBody.error = 'Something went wrong';
             responseBody.message = "There was a unexpected error"
             break;
     }

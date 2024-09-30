@@ -1,4 +1,4 @@
-.PHONY: run-dbs seed-express-db run-rabbitmq
+.PHONY: run-dbs seed-express-db run-rabbitmq migrate-express-db
 
 run-rabbitmq:
 	docker-compose build rabbitmq
@@ -21,3 +21,10 @@ seed-express-db:
 	@echo "--> Migrating express-db <--"
 	cd express && yarn seed
 	
+migrate-express-db: 
+	@echo "--> Migrating express-db <--"
+	cd express && yarn migrate
+	
+migrate dotnet db: 
+	@echo "--> Migrating dotnet-db <--"
+	cd dotnet-api && dotnet ef database update

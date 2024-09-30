@@ -1,7 +1,7 @@
 import {User} from "@prisma/client";
 import bcrypt from 'bcrypt';
 
-import {LoginUserContract} from "../../../contracts/auth/LoginUserContract";
+import {LoginUserRequest} from "../../../contracts/auth/LoginUserRequest";
 import {CreateUserContract} from "../../../contracts/auth/RegisterUserRequest";
 import prisma from "../../../prismaClient";
 import {NotFoundError} from "../_common/exceptions/NotFoundError";
@@ -11,7 +11,7 @@ import {UpdateUserRoleRequest} from "../../../contracts/auth/UpdateUserRoleReque
 import {BadRequestError} from "../_common/exceptions/BadRequestError";
 
 class authServiceClass {
-    async login(data: LoginUserContract): Promise<{ user: User, jwt: string }> {
+    async login(data: LoginUserRequest): Promise<{ user: User, jwt: string }> {
         const user = await prisma.user.findUnique({
             where: {
                 email: data.email

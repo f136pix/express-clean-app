@@ -44,6 +44,8 @@
     "dev": "nodemon --exec npx ts-node src/app.ts",
     "seed": "npx ts-node prisma/seed.ts",
     "lint": "npx eslint -c .eslint.cjs . --fix",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "migrate": "npx prisma migrate dev"
+
   }
 }

@@ -24,19 +24,19 @@ services:
       - pg-dotnetdata:/var/lib/postgresql/data
   
   
-  express-api:
-    build: .
-    command: sh -c "while !</dev/tcp/db/5432; do sleep 1; done; npm start"
-    environment:
-      DB_HOST: db
-      DB_PORT: 5432
-      DB_USER: admin
-      DB_PASSWORD: password!
-      DB_NAME: express
-    ports:
-      - "5000:5000"
-    depends_on:
-      - express-db
+#  express-api:
+#    build: .
+#    command: sh -c "while !</dev/tcp/db/5432; do sleep 1; done; npm start"
+#    environment:
+#      DB_HOST: db
+#      DB_PORT: 5432
+#      DB_USER: admin
+#      DB_PASSWORD: password!
+#      DB_NAME: express
+#    ports:
+#      - "5000:5000"
+#    depends_on:
+#      - express-db
 
   rabbitmq:
     image: rabbitmq:3-management-alpine
