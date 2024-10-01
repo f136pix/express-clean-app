@@ -1,5 +1,5 @@
 import {CreateUserCommand} from "../../../application/auth/commands/CreateUserCommand";
-import {CreateUserContract} from "../../../../../contracts/auth/RegisterUserRequest";
+import {CreateUserRequest} from "../../../../../contracts/auth/RegisterUserRequest";
 import {Router} from "express";
 import asyncHandler from "../../_common/middlewares/asyncHandler";
 import CreateUserCommandHandler from "../../../application/auth/commands/CreateUserCommandHandler";
@@ -65,7 +65,7 @@ class AuthController {
 
 
     private async Register(req: any, res: any, next: any): Promise<void> {
-        const data: CreateUserContract = req.body;
+        const data: CreateUserRequest = req.body;
         const command = new CreateUserCommand(data.name, data.email, data.password)
         const ret: ErrorOr<AuthResult> = await createUserCommandHandler.handle(command);
 

@@ -2,7 +2,7 @@ import {response, Router} from 'express';
 
 import {LoginUserRequest} from "../../../contracts/auth/LoginUserRequest";
 import {LoginUserResponse} from "../../../contracts/auth/LoginUserResponse";
-import {CreateUserContract} from "../../../contracts/auth/RegisterUserRequest";
+import {CreateUserRequest} from "../../../contracts/auth/RegisterUserRequest";
 import {RegisterUserResponse} from "../../../contracts/auth/RegisterUserResponse";
 import {MessageResponse} from "../_common/interfaces";
 import asyncHandler from "../_common/middlewares/asyncHandler";

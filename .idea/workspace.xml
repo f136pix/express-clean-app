@@ -5,274 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a52dcb17-74cc-4098-93b1-11fad1f1c05b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/application/auth/queries/LoginUserQuery.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/application/auth/queries/LoginUserQueryHandler.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/interfaces/messageResponse.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/utils/errorOrExtensions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/.idea/.idea.LINQ/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/.idea/.idea.LINQ/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/.idea/.idea.LINQ/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/.idea/.idea.LINQ/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/GlobalUsing.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/LINQ.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/bin/Debug/net6.0/Dumpify.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/bin/Debug/net6.0/LINQ.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/bin/Debug/net6.0/LINQ.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/bin/Debug/net6.0/LINQ.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/bin/Debug/net6.0/LINQ.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/bin/Debug/net6.0/LINQ.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/bin/Debug/net6.0/Spectre.Console.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/LINQ.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/LINQ.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/LINQ.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/LINQ.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/LINQ.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/LINQ.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/LINQ.csproj.CopyComplete" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/application/_common/auth/authResult.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/LINQ.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/LINQ.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/LINQ.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/LINQ.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/LINQ.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/ref/LINQ.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/Debug/net6.0/refint/LINQ.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/LINQ.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/LINQ.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/LINQ.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/rider.project.model.nuget.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/LINQ/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/LINQ/global.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/.idea/.idea.dotnet-api/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/.idea/.idea.dotnet-api/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/.idea/.idea.dotnet-api/.idea/indexLayout.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/.idea/.idea.dotnet-api/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Application.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Clients/Commands/CreateClient/CreateClientCommand.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Clients/Commands/CreateClient/CreateClientCommandHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Clients/Queries/GetClientById/GetClientByIdQuery.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/Clients/Queries/GetClientById/GetClientByIdQueryHandler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/DependencyInjection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Exceptions/AlreadyExistsException.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Exceptions/NotFoundException.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Interfaces/IApplicationDbContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Interfaces/IApplicationReadDbConnection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Interfaces/IApplicationWriteDbConnection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Interfaces/IConnectionFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/_Common/Interfaces/IEmailSender.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/bin/Debug/net6.0/Application.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/bin/Debug/net6.0/Application.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/bin/Debug/net6.0/Application.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/bin/Debug/net6.0/Contracts.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/bin/Debug/net6.0/Contracts.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/bin/Debug/net6.0/Domain.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/bin/Debug/net6.0/Domain.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Application.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Application.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Application.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/Application.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/Application.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/Application.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/Application.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/Application.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/Application.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/Application.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/Application.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/Application.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/Application.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/Application.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/ref/Application.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/Debug/net6.0/refint/Application.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/rider.project.model.nuget.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Application/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/Contracts.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/Items/CreateItemRequest.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/bin/Debug/net6.0/Contracts.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/bin/Debug/net6.0/Contracts.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/bin/Debug/net6.0/Contracts.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Contracts.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Contracts.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Contracts.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/Contracts.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/Contracts.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/Contracts.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/Contracts.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/Contracts.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/Contracts.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/Contracts.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/Contracts.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/Contracts.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/Contracts.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/ref/Contracts.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/Debug/net6.0/refint/Contracts.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/rider.project.model.nuget.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Contracts/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Client.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Domain.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/Email.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/bin/Debug/net6.0/Domain.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/bin/Debug/net6.0/Domain.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/bin/Debug/net6.0/Domain.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/Domain.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/Domain.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/Domain.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/Domain.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/Domain.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/Domain.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/Domain.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/Domain.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/Domain.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/Domain.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/ref/Domain.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Debug/net6.0/refint/Domain.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Domain.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Domain.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/Domain.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/rider.project.model.nuget.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Domain/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Controllers/ClientsController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Controllers/WeatherForecastController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/DependencyInjection.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Infaestructure.csproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Migrations/20240902163621_initial-create.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Migrations/20240902163621_initial-create.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Migrations/20240902175014_fix-user-table.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Migrations/20240902175014_fix-user-table.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Configurations/ClientConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Configurations/EmailConfiguration.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Connections/ConnectionFactory.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Persistance/Context/ApplicationDbContext.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Program.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/Properties/launchSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/WeatherForecast.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/_Common/Middleware/GlobalExceptionHandlingMiddleware.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/_Common/Models/ResponseModel.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Application.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Application.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Autofac.Extensions.DependencyInjection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Autofac.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Contracts.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Contracts.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Dapper.Extensions.PostgreSql.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Dapper.Extensions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Dapper.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Domain.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Domain.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Humanizer.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Infaestructure.deps.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Infaestructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Infaestructure.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Infaestructure.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Infaestructure.runtimeconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/MediatR.Contracts.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/MediatR.Extensions.Microsoft.DependencyInjection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/MediatR.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.Caching.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.Caching.Memory.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.Configuration.Binder.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.Configuration.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.DependencyModel.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.FileProviders.Physical.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.FileSystemGlobbing.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.Hosting.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.Logging.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.Options.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.Extensions.Primitives.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Microsoft.OpenApi.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Mono.TextTemplating.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Newtonsoft.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Npgsql.EntityFrameworkCore.PostgreSQL.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Npgsql.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Swashbuckle.AspNetCore.Swagger.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerGen.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/Swashbuckle.AspNetCore.SwaggerUI.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/System.CodeDom.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/System.Text.Encodings.Web.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/System.Text.Json.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/appsettings.Development.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/appsettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/bin/Debug/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/.NETCoreApp,Version=v6.0.AssemblyAttributes.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.csproj.CopyComplete" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.csproj.CoreCompileInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.csproj.FileListAbsolute.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.genruntimeconfig.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/Infaestructure.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/apphost.exe" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/dotnet-api.AssemblyInfo.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/dotnet-api.AssemblyInfoInputs.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/dotnet-api.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/dotnet-api.GlobalUsings.g.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/dotnet-api.assets.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/dotnet-api.csproj.AssemblyReference.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/ref/Infaestructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/refint/Infaestructure.dll" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Debug/net6.0/staticwebassets.build.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Infaestructure.csproj.EntityFrameworkCore.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Infaestructure.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Infaestructure.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/Infaestructure.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/dotnet-api.csproj.nuget.dgspec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/dotnet-api.csproj.nuget.g.props" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/dotnet-api.csproj.nuget.g.targets" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/project.assets.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/project.nuget.cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/project.packagespec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/rider.project.model.nuget.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/rider.project.restore.info" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/Infaestructure/obj/staticwebassets.pack.sentinel" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/dotnet-api.sln" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dotnet/dotnet-api/global.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/express/.env" beforeDir="false" afterPath="$PROJECT_DIR$/express/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/express/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/express/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/express/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/express/src/api/v1/auth/authController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/auth/authController.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/express/src/api/v1/auth/authService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/auth/authService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v2/application/auth/commands/CreateUserCommandHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/application/auth/commands/CreateUserCommandHandler.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/middlewares/errorHandler.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/_common/middlewares/errorHandler.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/express/src/api/v2/infraestructure/auth/controllers/AuthController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/auth/controllers/AuthController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/contracts/auth/LoginUserContract.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/contracts/auth/LoginUserRequest.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/express/src/contracts/auth/RegisterUserRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/contracts/auth/RegisterUserRequest.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -297,24 +37,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Docker.docker-compose.yml.express-db: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Docker.docker-compose.yml.rabbitmq: Compose Deployment.executor&quot;: &quot;Run&quot;,
-    &quot;Makefile Target.run-dbs.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/filipe/Desktop/express-clean-app&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/home/filipe/Desktop/express-clean-app/express/node_modules/typescript/lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Docker.docker-compose.yml.express-app: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.express-db: Compose Deployment.executor": "Run",
+    "Docker.docker-compose.yml.rabbitmq: Compose Deployment.executor": "Run",
+    "Docker.express/Dockerfile.executor": "Run",
+    "Makefile Target.run-dbs.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/filipe/Desktop/express-clean-app",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "ts.external.directory.path": "C:\\Users\\felipe.cinel\\Desktop\\express-clean-app\\express\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express\src\api\v2\infraestructure\_common\exceptions\defaultModels" />
@@ -329,16 +71,27 @@
       <recent name="C:\Users\felipe.cinel\Desktop\express-clean-app\express\src\api\v2\domain\_common" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml.express-db: Compose Deployment">
-    <configuration name="run-dbs" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="run-dbs" workingDirectory="" arguments="">
-        <envs />
-      </makefile>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Docker.express/Dockerfile">
     <configuration default="true" type="docker-deploy" factoryName="docker-compose.yml" temporary="true">
       <deployment type="docker-compose.yml">
         <settings />
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
+      <deployment type="dockerfile" />
+      <method v="2" />
+    </configuration>
+    <configuration name="docker-compose.yml.express-app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="services">
+            <list>
+              <option value="express-app" />
+            </list>
+          </option>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
       </deployment>
       <method v="2" />
     </configuration>
@@ -368,6 +121,14 @@
       </deployment>
       <method v="2" />
     </configuration>
+    <configuration name="express/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="sourceFilePath" value="express/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
     <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/express/package.json" />
       <command value="run" />
@@ -380,6 +141,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.express/Dockerfile" />
+        <item itemvalue="Docker.docker-compose.yml.express-app: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.express-db: Compose Deployment" />
         <item itemvalue="Docker.docker-compose.yml.rabbitmq: Compose Deployment" />
         <item itemvalue="npm.dev" />
@@ -389,7 +152,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-WS-241.15989.105" />
+        <option value="bundled-js-predefined-d6986cc7102b-410509235cf1-JavaScript-WS-242.20224.426" />
       </set>
     </attachedChunks>
   </component>
@@ -428,6 +191,7 @@
       <workItem from="1727445677201" duration="10581000" />
       <workItem from="1727661656348" duration="851000" />
       <workItem from="1727697897909" duration="22000" />
+      <workItem from="1727700657889" duration="5800000" />
     </task>
     <servers />
   </component>

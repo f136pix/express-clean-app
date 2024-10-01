@@ -2,7 +2,7 @@ import {User} from "@prisma/client";
 import bcrypt from 'bcrypt';
 
 import {LoginUserRequest} from "../../../contracts/auth/LoginUserRequest";
-import {CreateUserContract} from "../../../contracts/auth/RegisterUserRequest";
+import {CreateUserRequest} from "../../../contracts/auth/RegisterUserRequest";
 import prisma from "../../../prismaClient";
 import {NotFoundError} from "../_common/exceptions/NotFoundError";
 import {UnauthorizedError} from "../_common/exceptions/UnauthorizedError";
@@ -37,7 +37,7 @@ class authServiceClass {
         };
     }
 
-    async register(data: CreateUserContract): Promise<{ user: User, jwt: string }> {
+    async register(data: CreateUserRequest): Promise<{ user: User, jwt: string }> {
         const user = await prisma.user.findUnique({
             where: {
                 email: data.email

@@ -22,21 +22,6 @@ services:
       - "5435:5432"
     volumes:
       - pg-dotnetdata:/var/lib/postgresql/data
-  
-  
-#  express-api:
-#    build: .
-#    command: sh -c "while !</dev/tcp/db/5432; do sleep 1; done; npm start"
-#    environment:
-#      DB_HOST: db
-#      DB_PORT: 5432
-#      DB_USER: admin
-#      DB_PASSWORD: password!
-#      DB_NAME: express
-#    ports:
-#      - "5000:5000"
-#    depends_on:
-#      - express-db
 
   rabbitmq:
     image: rabbitmq:3-management-alpine
@@ -47,6 +32,17 @@ services:
     volumes:
       - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
       - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+
+  express-app:
+    build:
+      context: .
+      dockerfile: ./express/Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - express-db
+    volumes:
+      - .:/usr/src/app
 
 volumes:
   pg-expressdata:
