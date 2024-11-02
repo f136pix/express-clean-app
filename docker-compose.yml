@@ -2,7 +2,6 @@ version: '3.8'
 
 services:
   express-db:
-    container_name: 'express-db'
     image: postgres:latest
     environment:
       POSTGRES_DB: express
@@ -12,11 +11,8 @@ services:
       - "5436:5432"
     volumes:
       - pg-expressdata:/var/lib/postgresql/data
-    networks:
-      - common-net
   
   dotnet-db:
-    container_name: 'dotnet-db'
     image: postgres:latest
     environment:
       POSTGRES_DB: dotnet
@@ -26,7 +22,7 @@ services:
       - "5435:5432"
     volumes:
       - pg-dotnetdata:/var/lib/postgresql/data
-  
+
   rabbitmq:
     image: rabbitmq:3-management-alpine
     container_name: 'rabbitmq'
@@ -36,27 +32,18 @@ services:
     volumes:
       - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
       - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
-    networks:
-        - common-net
-  
-  express:
-    container_name: 'express'
+
+  express-app:
     build:
-      context: ./express
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: ./express/Dockerfile
     ports:
       - "5000:5000"
     depends_on:
       - express-db
-      - rabbitmq
-    networks:
-      - common-net
+    volumes:
+      - .:/usr/src/app
 
 volumes:
   pg-expressdata:
   pg-dotnetdata:
-
-networks:
-  common-net: 
-    driver: bridge 
-    

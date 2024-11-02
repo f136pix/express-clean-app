@@ -2,13 +2,13 @@ import {User} from "@prisma/client";
 import bcrypt from 'bcrypt';
 
 import {LoginUserRequest} from "../../../contracts/auth/LoginUserRequest";
-import {CreateUserContract} from "../../../contracts/auth/RegisterUserRequest";
-import {UpdateUserRoleRequest} from "../../../contracts/auth/UpdateUserRoleRequest";
+import {CreateUserRequest} from "../../../contracts/auth/RegisterUserRequest";
 import prisma from "../../../prismaClient";
-import {BadRequestError} from "../_common/exceptions/BadRequestError";
 import {NotFoundError} from "../_common/exceptions/NotFoundError";
 import {UnauthorizedError} from "../_common/exceptions/UnauthorizedError";
 import jwtService from "../_common/services/jwtService";
+import {UpdateUserRoleRequest} from "../../../contracts/auth/UpdateUserRoleRequest";
+import {BadRequestError} from "../_common/exceptions/BadRequestError";
 
 class authServiceClass {
     async login(data: LoginUserRequest): Promise<{ user: User, jwt: string }> {
@@ -37,7 +37,7 @@ class authServiceClass {
         };
     }
 
-    async register(data: CreateUserContract): Promise<{ user: User, jwt: string }> {
+    async register(data: CreateUserRequest): Promise<{ user: User, jwt: string }> {
         const user = await prisma.user.findUnique({
             where: {
                 email: data.email
@@ -79,20 +79,20 @@ class authServiceClass {
             where: {
                 name: data.role
             }
-        });
+        })
 
         if(!role) {
-            throw new BadRequestError("The provided Role does not exists");
+            throw new BadRequestError("The provided Role does not exists")
         }
 
         const user = await prisma.user.findUnique({
             where: {
                 id: data.id
             }
-        });
+        })
 
         if(!user) {
-            throw new BadRequestError("User with the provided Id does not exists");
+            throw new BadRequestError("User with the provided Id does not exists")
         }
 
         const updatedUser = await prisma.user.update({
@@ -104,7 +104,7 @@ class authServiceClass {
             }
         });
 
-        return updatedUser;
+        return updatedUser
     }
 
     async deleteUser (id: number) : Promise<User> {
@@ -112,10 +112,10 @@ class authServiceClass {
             where: {
                 id: id
             }
-        });
+        })
 
         if(!user) {
-            throw new NotFoundError("User with the provided Id does not exists");
+            throw new NotFoundError("User with the provided Id does not exists")
         }
 
         // Performs soft delete
@@ -126,7 +126,7 @@ class authServiceClass {
             data: {
                 deleted: true
             }
-        });
+        })
     }
 }
 

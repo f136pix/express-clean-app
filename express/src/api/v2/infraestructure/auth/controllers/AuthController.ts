@@ -1,20 +1,19 @@
-import {Router} from "express";
-
-import {LoginUserRequest} from "../../../../../contracts/auth/LoginUserRequest";
-import {CreateUserContract} from "../../../../../contracts/auth/RegisterUserRequest";
-import {RegisterUserResponse} from "../../../../../contracts/auth/RegisterUserResponse";
-import {authSignin, authSignup} from "../../../../v1/auth/authValidation";
-import {AuthResult} from "../../../application/_common/auth/authResult";
 import {CreateUserCommand} from "../../../application/auth/commands/CreateUserCommand";
+import {CreateUserRequest} from "../../../../../contracts/auth/RegisterUserRequest";
+import {Router} from "express";
+import asyncHandler from "../../_common/middlewares/asyncHandler";
 import CreateUserCommandHandler from "../../../application/auth/commands/CreateUserCommandHandler";
 import createUserCommandHandler from "../../../application/auth/commands/CreateUserCommandHandler";
+import {ErrorOr} from "../../_common/exceptions/ErrorOr";
+import {authSignin, authSignup} from "../../../../v1/auth/authValidation";
+import schemaValidator from "../../_common/middlewares/schemaValidator";
+import {LoginUserRequest} from "../../../../../contracts/auth/LoginUserRequest";
+import {MessageResponse} from "../../_common/interfaces/messageResponse";
+import {handleErrorOr} from "../../_common/utils/errorOrExtensions";
+import {RegisterUserResponse} from "../../../../../contracts/auth/RegisterUserResponse";
+import {AuthResult} from "../../../application/_common/auth/authResult";
 import {LoginUserQuery} from "../../../application/auth/queries/LoginUserQuery";
 import LoginUserQueryHandler from "../../../application/auth/queries/LoginUserQueryHandler";
-import {ErrorOr} from "../../_common/exceptions/ErrorOr";
-import {MessageResponse} from "../../_common/interfaces/messageResponse";
-import asyncHandler from "../../_common/middlewares/asyncHandler";
-import schemaValidator from "../../_common/middlewares/schemaValidator";
-import {handleErrorOr} from "../../_common/utils/errorOrExtensions";
 
 class AuthController {
     public authRouter: Router;
@@ -41,7 +40,7 @@ class AuthController {
 
     private async Login(req: any, res: any, next: any): Promise<void> {
         const data: LoginUserRequest = req.body;
-        const query = new LoginUserQuery(data.email, data.password);
+        const query = new LoginUserQuery(data.email, data.password)
         const ret: ErrorOr<AuthResult> = await this.loginUserQueryHandler.handle(query);
         
         handleErrorOr(
@@ -56,7 +55,7 @@ class AuthController {
                         },
                         jwt: resData.jwt
                     }
-                };
+                }
                 res.status(200).json(response);
             },
             error => next(error)
@@ -66,8 +65,8 @@ class AuthController {
 
 
     private async Register(req: any, res: any, next: any): Promise<void> {
-        const data: CreateUserContract = req.body;
-        const command = new CreateUserCommand(data.name, data.email, data.password);
+        const data: CreateUserRequest = req.body;
+        const command = new CreateUserCommand(data.name, data.email, data.password)
         const ret: ErrorOr<AuthResult> = await createUserCommandHandler.handle(command);
 
         handleErrorOr(
@@ -82,7 +81,7 @@ class AuthController {
                         },
                         jwt: resData.jwt
                     }
-                };
+                }
                 res.status(201).json(response);
             },
             error => next(error)
