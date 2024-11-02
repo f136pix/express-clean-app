@@ -1,5 +1,6 @@
 import {RequestHandler} from "express";
 import Joi, {override} from "joi";
+
 import {Validation} from "../exceptions/defaultModels/Validation";
 
 interface ValidationError {
@@ -27,7 +28,7 @@ const schemaValidator = (validator: Joi.ObjectSchema): RequestHandler => {
 
         if (error) {
             const err = new Validation(error.details[0].message);
-            return next(err)
+            return next(err);
         }
 
         // validation successful

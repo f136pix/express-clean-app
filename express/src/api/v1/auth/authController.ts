@@ -1,17 +1,16 @@
-import {response, Router} from 'express';
+import {User} from "@prisma/client";
+import { Router} from 'express';
 
 import {LoginUserRequest} from "../../../contracts/auth/LoginUserRequest";
 import {LoginUserResponse} from "../../../contracts/auth/LoginUserResponse";
-import {CreateUserContract} from "../../../contracts/auth/RegisterUserRequest";
 import {RegisterUserResponse} from "../../../contracts/auth/RegisterUserResponse";
 import {MessageResponse} from "../_common/interfaces";
 import asyncHandler from "../_common/middlewares/asyncHandler";
+import {checkPermission} from "../_common/middlewares/rbacMiddleware";
 import schemaValidator from "../_common/middlewares/schemaValidator";
 
 import {authService} from "./authService";
 import {authSignin, authSignup, roleSchema} from "./authValidation";
-import {checkPermission} from "../_common/middlewares/rbacMiddleware";
-import {User} from "@prisma/client";
 
 const authController = Router();
 
@@ -53,10 +52,10 @@ authController.post('/:id/role',
         const response: MessageResponse<User> = {
             message: "User Updated successfully",
             data: ret
-        }
+        };
 
         res.json(response);
-    }))
+    }));
 
 authController.delete('/:id',
     checkPermission("delete:users"),
@@ -65,7 +64,7 @@ authController.delete('/:id',
         const response: MessageResponse<User> = {
             message: "User deleted successfully",
             data: ret
-        }
+        };
 
         res.json(response);
     }));

@@ -10,12 +10,10 @@ namespace Application.Clients.Commands.CreateClient;
 public class CreateClientCommandHandler : IRequestHandler<CreateClientCommand, Client>
 {
     private readonly IApplicationDbContext _dbContext;
-    private readonly IDapperConnectionFactory _connectionFactory;
 
-    public CreateClientCommandHandler(IApplicationDbContext applicationDbContext, IDapperConnectionFactory factory, IDapperConnectionFactory connectionFactory)
+    public CreateClientCommandHandler(IApplicationDbContext applicationDbContext)
     {
         _dbContext = applicationDbContext;
-        _connectionFactory = connectionFactory;
     }
 
     public async Task<Client> Handle(CreateClientCommand request, CancellationToken cancellationToken)

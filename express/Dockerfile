@@ -13,11 +13,21 @@ WORKDIR /usr/src/app
 RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=bind,source=yarn.lock,target=yarn.lock \
     --mount=type=cache,target=/root/.yarn \
-    yarn install --production --frozen-lockfile
+    yarn install --production --frozen-lockfile 
 
-USER node
+RUN mkdir -p /usr/src/app/dist && chown -R node:node /usr/src/** 
+
+RUN yarn global add typescript
+
+USER root
+
+#USER node
 
 COPY . .
+
+#RUN npx prisma@5.0.0 db pull --url postgres://admin:password!@express-db:5432/express?connect_timeout=999
+RUN yarn migrate 
+RUN yarn seed
 
 EXPOSE 5000
 

@@ -1,6 +1,7 @@
 import {Router} from "express";
-import AuthController from "./infraestructure/auth/controllers/AuthController";
+
 import {errorHandler} from "./infraestructure/_common/middlewares/errorHandler";
+import AuthController from "./infraestructure/auth/controllers/AuthController";
 
 const v2Router = Router();
 

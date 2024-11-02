@@ -326,41 +326,10 @@
   resolved "https://registry.npmjs.org/@prisma/client/-/client-5.18.0.tgz"
   integrity sha512-BWivkLh+af1kqC89zCJYkHsRcyWsM8/JHpsDMM76DjP3ZdEquJhXa4IeX+HkWPnwJ5FanxEJFZZDTWiDs/Kvyw==
 
-"@prisma/debug@5.18.0":
-  version "5.18.0"
-  resolved "https://registry.npmjs.org/@prisma/debug/-/debug-5.18.0.tgz"
-  integrity sha512-f+ZvpTLidSo3LMJxQPVgAxdAjzv5OpzAo/eF8qZqbwvgi2F5cTOI9XCpdRzJYA0iGfajjwjOKKrVq64vkxEfUw==
-
-"@prisma/engines-version@5.18.0-25.4c784e32044a8a016d99474bd02a3b6123742169":
-  version "5.18.0-25.4c784e32044a8a016d99474bd02a3b6123742169"
-  resolved "https://registry.npmjs.org/@prisma/engines-version/-/engines-version-5.18.0-25.4c784e32044a8a016d99474bd02a3b6123742169.tgz"
-  integrity sha512-a/+LpJj8vYU3nmtkg+N3X51ddbt35yYrRe8wqHTJtYQt7l1f8kjIBcCs6sHJvodW/EK5XGvboOiwm47fmNrbgg==
-
-"@prisma/engines@5.18.0":
-  version "5.18.0"
-  resolved "https://registry.npmjs.org/@prisma/engines/-/engines-5.18.0.tgz"
-  integrity sha512-ofmpGLeJ2q2P0wa/XaEgTnX/IsLnvSp/gZts0zjgLNdBhfuj2lowOOPmDcfKljLQUXMvAek3lw5T01kHmCG8rg==
-  dependencies:
-    "@prisma/debug" "5.18.0"
-    "@prisma/engines-version" "5.18.0-25.4c784e32044a8a016d99474bd02a3b6123742169"
-    "@prisma/fetch-engine" "5.18.0"
-    "@prisma/get-platform" "5.18.0"
-
-"@prisma/fetch-engine@5.18.0":
-  version "5.18.0"
-  resolved "https://registry.npmjs.org/@prisma/fetch-engine/-/fetch-engine-5.18.0.tgz"
-  integrity sha512-I/3u0x2n31rGaAuBRx2YK4eB7R/1zCuayo2DGwSpGyrJWsZesrV7QVw7ND0/Suxeo/vLkJ5OwuBqHoCxvTHpOg==
-  dependencies:
-    "@prisma/debug" "5.18.0"
-    "@prisma/engines-version" "5.18.0-25.4c784e32044a8a016d99474bd02a3b6123742169"
-    "@prisma/get-platform" "5.18.0"
-
-"@prisma/get-platform@5.18.0":
-  version "5.18.0"
-  resolved "https://registry.npmjs.org/@prisma/get-platform/-/get-platform-5.18.0.tgz"
-  integrity sha512-Tk+m7+uhqcKDgnMnFN0lRiH7Ewea0OEsZZs9pqXa7i3+7svS3FSCqDBCaM9x5fmhhkufiG0BtunJVDka+46DlA==
-  dependencies:
-    "@prisma/debug" "5.18.0"
+"@prisma/engines@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-5.0.0.tgz#5249650eabe77c458c90f2be97d8210353c2e22e"
+  integrity sha512-kyT/8fd0OpWmhAU5YnY7eP31brW1q1YrTGoblWrhQJDiN/1K+Z8S1kylcmtjqx5wsUGcP1HBWutayA/jtyt+sg==
 
 "@rtsao/scc@^1.1.0":
   version "1.1.0"
@@ -383,13 +352,6 @@
   version "2.0.0"
   resolved "https://registry.npmjs.org/@sideway/pinpoint/-/pinpoint-2.0.0.tgz"
   integrity sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==
-
-"@types/amqp-connection-manager@^3.4.1":
-  version "3.4.1"
-  resolved "https://registry.npmjs.org/@types/amqp-connection-manager/-/amqp-connection-manager-3.4.1.tgz"
-  integrity sha512-IUKZjnE7V+aUbuHvNZAZiAo4ew7Zzgz1aDiZiN2QEms1EzCYegsT7/Kondgc3UuC2j+Xjz8Gj7jIxnnQ5dWtGQ==
-  dependencies:
-    amqp-connection-manager "*"
 
 "@types/amqp@^0.2.8":
   version "0.2.8"
@@ -692,13 +654,6 @@ ajv@^6.12.4:
     fast-json-stable-stringify "^2.0.0"
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
-
-amqp-connection-manager@*:
-  version "4.1.14"
-  resolved "https://registry.npmjs.org/amqp-connection-manager/-/amqp-connection-manager-4.1.14.tgz"
-  integrity sha512-1km47dIvEr0HhMUazqovSvNwIlSvDX2APdUpULaINtHpiki1O+cLRaTeXb/jav4OLtH+k6GBXx5gsKOT9kcGKQ==
-  dependencies:
-    promise-breaker "^6.0.0"
 
 amqp@^0.2.7:
   version "0.2.7"
@@ -2744,17 +2699,12 @@ prettier@^2.6.2:
   resolved "https://registry.npmjs.org/prettier/-/prettier-2.8.8.tgz"
   integrity sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==
 
-prisma@^5.18.0:
-  version "5.18.0"
-  resolved "https://registry.npmjs.org/prisma/-/prisma-5.18.0.tgz"
-  integrity sha512-+TrSIxZsh64OPOmaSgVPH7ALL9dfU0jceYaMJXsNrTkFHO7/3RANi5K2ZiPB1De9+KDxCWn7jvRq8y8pvk+o9g==
+prisma@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/prisma/-/prisma-5.0.0.tgz#f6571c46dc2478172cb7bc1bb62d74026a2c2630"
+  integrity sha512-KYWk83Fhi1FH59jSpavAYTt2eoMVW9YKgu8ci0kuUnt6Dup5Qy47pcB4/TLmiPAbhGrxxSz7gsSnJcCmkyPANA==
   dependencies:
-    "@prisma/engines" "5.18.0"
-
-promise-breaker@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.npmjs.org/promise-breaker/-/promise-breaker-6.0.0.tgz"
-  integrity sha512-BthzO9yTPswGf7etOBiHCVuugs2N01/Q/94dIPls48z2zCmrnDptUUZzfIb+41xq0MnYZ/BzmOd6ikDR4ibNZA==
+    "@prisma/engines" "5.0.0"
 
 prop-types@^15.8.1:
   version "15.8.1"

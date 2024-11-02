@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+
 import prismaClient from "../../../../../../prismaClient";
 import {User} from "../../../../domain/UserAggregate/User";
 
@@ -6,7 +7,7 @@ class UserRepository {
     private prisma: PrismaClient;
 
     constructor() {
-        this.prisma = prismaClient
+        this.prisma = prismaClient;
     }
 
     async addAsync(user: User): Promise<User> {
@@ -28,7 +29,7 @@ class UserRepository {
     async findByEmailAsync(email: string): Promise<User | null> {
         const prismaUser = await this.prisma.user.findUnique({
             where: { email }
-        })
+        });
 
         if(!prismaUser) return null;
 

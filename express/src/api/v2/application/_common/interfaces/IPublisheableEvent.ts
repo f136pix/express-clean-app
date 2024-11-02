@@ -1,1 +1,1 @@
-export default interface IPublisheableEvent {}
+export default interface IPublisheableEvent {};

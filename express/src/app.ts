@@ -3,8 +3,8 @@ import express, {Express} from 'express';
 import {server} from "typescript";
 
 import v1Router from "./api/v1";
-import terminate from "./terminate";
 import v2Router from "./api/v2";
+import terminate from "./terminate";
 
 const exitHandler = terminate(server, {
     coredump: false,
@@ -25,6 +25,9 @@ const port = 5000;
 
 app.use('/api/v1', v1Router);
 app.use('/api/v2', v2Router);
+app.use('/health', (req, res) => {
+    res.status(200).json({ message: 'App is running' });
+});
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

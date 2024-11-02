@@ -1,5 +1,5 @@
-import {DomainEvent} from "../../DomainEvent";
 import {IDomainEvent} from "../../_common/interfaces/IDomainEvent";
+import {DomainEvent} from "../../DomainEvent";
 
 export class UserCreatedDomainEvent extends DomainEvent {
     public static eventName = 'UserCreated';

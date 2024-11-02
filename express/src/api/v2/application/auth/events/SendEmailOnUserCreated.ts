@@ -1,9 +1,9 @@
-import {IDomainEventSubscriber} from "../../_common/interfaces/IDomainEventSubscriber";
-import {UserCreatedDomainEvent} from "../../../domain/UserAggregate/Events/UserCreated";
 import {IDomainEvent} from "../../../domain/_common/interfaces/IDomainEvent";
-import IPublisheableEvent from "../../_common/interfaces/IPublisheableEvent";
-import IMessageBrokerPublisher from "../../_common/interfaces/IMessageBrokerPublisher";
+import {UserCreatedDomainEvent} from "../../../domain/UserAggregate/Events/UserCreated";
 import RabbitMqEventPublisher from "../../../infraestructure/_common/models/RabbitMqEventPublisher";
+import {IDomainEventSubscriber} from "../../_common/interfaces/IDomainEventSubscriber";
+import IMessageBrokerPublisher from "../../_common/interfaces/IMessageBrokerPublisher";
+import IPublisheableEvent from "../../_common/interfaces/IPublisheableEvent";
 
 
 export class SendEmailOnUserCreated
@@ -11,7 +11,6 @@ export class SendEmailOnUserCreated
 {
     private readonly publisher : IMessageBrokerPublisher;
     constructor( ) {
-
         this.publisher = RabbitMqEventPublisher;
     }
 
@@ -26,7 +25,7 @@ export class SendEmailOnUserCreated
         const sendEmailEvent : IPublisheableEvent = {
             name: name,
             email: email
-        }
+        };
 
         await this.publisher.publishAsync(sendEmailEvent, "send.email");
 

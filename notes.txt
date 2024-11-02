@@ -1,0 +1,10 @@
+# Connect to EC2    
+ssh -i Downloads/private-subnet-key.pem -l ec2-user 18.230.22.46
+
+# Db private endpoint 
+express-private-db.c7ooue240k4c.sa-east-1.rds.amazonaws.com:5432
+psql -h express-private-db.c7ooue240k4c.sa-east-1.rds.amazonaws.com -p 5432 -Umaster postgres
+
+# Tunnel Jump Box
+ssh -i Downloads/private-subnet-key.pem -f -N -L 5406:express-private-db.c7ooue240k4c.sa-east-1.rds.amazonaws.com:5432 ec2-user@18.230.22.46 -v
+

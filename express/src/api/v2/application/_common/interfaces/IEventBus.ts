@@ -1,4 +1,5 @@
 import {DomainEvent} from "../../../domain/DomainEvent";
+
 import {IDomainEventSubscriber} from "./IDomainEventSubscriber";
 
 export interface IEventBus {

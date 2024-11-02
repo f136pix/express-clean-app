@@ -1,19 +1,21 @@
-import {CreateUserCommand} from "./CreateUserCommand";
+import bcrypt from "bcrypt";
+
+import jwtService from "../../../../v1/_common/services/jwtService";
+import {UserCreatedDomainEvent} from "../../../domain/UserAggregate/Events/UserCreated";
 import {User} from "../../../domain/UserAggregate/User";
-import UserRepository from "../../../infraestructure/_common/persistance/repositories/UserRepository";
+import {Conflict} from "../../../infraestructure/_common/exceptions/defaultModels/Conflict";
+import {NotFound} from "../../../infraestructure/_common/exceptions/defaultModels/NotFound";
+import {Success} from "../../../infraestructure/_common/exceptions/defaultModels/Success";
+import {ErrorOr} from "../../../infraestructure/_common/exceptions/ErrorOr";
+import getEventBus from "../../../infraestructure/_common/models/InMemoryEventBus";
 import RoleRepository from "../../../infraestructure/_common/persistance/repositories/RolesRepository";
 import rolesRepository from "../../../infraestructure/_common/persistance/repositories/RolesRepository";
-import {IEventBus} from "../../_common/interfaces/IEventBus";
-import {UserCreatedDomainEvent} from "../../../domain/UserAggregate/Events/UserCreated";
-import getEventBus from "../../../infraestructure/_common/models/InMemoryEventBus";
+import UserRepository from "../../../infraestructure/_common/persistance/repositories/UserRepository";
 import userRepository from "../../../infraestructure/_common/persistance/repositories/UserRepository";
-import {ErrorOr} from "../../../infraestructure/_common/exceptions/ErrorOr";
-import {Conflict} from "../../../infraestructure/_common/exceptions/defaultModels/Conflict";
-import {Success} from "../../../infraestructure/_common/exceptions/defaultModels/Success";
-import {NotFound} from "../../../infraestructure/_common/exceptions/defaultModels/NotFound";
-import jwtService from "../../../../v1/_common/services/jwtService";
 import {AuthResult} from "../../_common/auth/authResult";
-import bcrypt from "bcrypt";
+import {IEventBus} from "../../_common/interfaces/IEventBus";
+
+import {CreateUserCommand} from "./CreateUserCommand";
 
 
 class CreateUserCommandHandler {
@@ -40,7 +42,7 @@ class CreateUserCommandHandler {
         const saltRounds = 10;
         const hashedPassword = await bcrypt.hash(data.password, saltRounds);
 
-        const user = User.create(data.email, data.email, hashedPassword, role!)
+        const user = User.create(data.email, data.email, hashedPassword, role!);
 
         await this.userRepository.addAsync(user);
 
@@ -51,7 +53,7 @@ class CreateUserCommandHandler {
         const returnData: AuthResult = {
                 user: user,
                 jwt: jwt
-        }
+        };
 
         await this.eventBus.publish([userCreatedEvent]);
         return new Success(returnData);

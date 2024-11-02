@@ -1,11 +1,12 @@
 import {NextFunction, Request, Response} from "express";
-import {Validation} from "../exceptions/defaultModels/Validation";
-import {ErrorOr} from "../exceptions/ErrorOr";
+
 import {Conflict} from "../exceptions/defaultModels/Conflict";
 import {Forbidden} from "../exceptions/defaultModels/Forbidden";
 import {NotFound} from "../exceptions/defaultModels/NotFound";
 import {Unauthorized} from "../exceptions/defaultModels/Unauthorized";
 import {Unexpected} from "../exceptions/defaultModels/Unexpected";
+import {Validation} from "../exceptions/defaultModels/Validation";
+import {ErrorOr} from "../exceptions/ErrorOr";
 
 type ResponseBody = {
     message: string;
@@ -22,7 +23,7 @@ export const errorHandler = (
     const statusCode = res.statusCode >= 500 ? 500 : res.statusCode;
     res.status(statusCode);
 
-    let responseBody: ResponseBody = {
+    const responseBody: ResponseBody = {
         message: " "
     };
 
@@ -73,7 +74,7 @@ export const errorHandler = (
             res.status(500);
             console.log(err);
             responseBody.error = 'Something went wrong';
-            responseBody.message = "There was a unexpected error"
+            responseBody.message = "There was a unexpected error";
             break;
     }
     res.json(responseBody);

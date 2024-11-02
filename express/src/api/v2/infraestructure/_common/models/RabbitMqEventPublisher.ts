@@ -1,4 +1,5 @@
 import * as amqp from 'amqplib';
+
 import IMessageBrokerPublisher from "../../../application/_common/interfaces/IMessageBrokerPublisher";
 
 class EventPublisher implements IMessageBrokerPublisher {
@@ -13,6 +14,7 @@ class EventPublisher implements IMessageBrokerPublisher {
             channel.publish(exchange, routingKey, Buffer.from(JSON.stringify(event)));
             console.log('Event published:', event);
 
+            // Not optimal, should not close on every publish
             await channel.close();
             await connection.close();
         } catch (error) {
@@ -21,4 +23,4 @@ class EventPublisher implements IMessageBrokerPublisher {
     }
 }
 
-export default new EventPublisher()
+export default new EventPublisher();

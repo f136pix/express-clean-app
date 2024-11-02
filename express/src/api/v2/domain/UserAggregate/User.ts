@@ -1,9 +1,8 @@
-import {UserId} from "./UserId";
-import {Role} from "./Role";
-import {Item} from "./Item";
-
-
 import {User as UserPrisma} from "@prisma/client"; // Import Prisma's Permission type
+
+import {Item} from "./Item";
+import {Role} from "./Role";
+import {UserId} from "./UserId";
 
 export class User {
 
@@ -11,10 +10,10 @@ export class User {
         this.id = id;
         this.name = name;
         this.email = email;
-        this.password = password
+        this.password = password;
         this.deleted = false;
         this.role = role;
-        this.items = []
+        this.items = [];
     }
 
     public id: UserId;
@@ -23,7 +22,7 @@ export class User {
     public password: string;
     public deleted: boolean;
     public role?: Role;
-    public items?: Item[] = []
+    public items?: Item[] = [];
 
     public static create(name: string, email: string, password: string, role: Role): User {
         return new User(

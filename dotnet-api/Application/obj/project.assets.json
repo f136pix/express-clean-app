@@ -103,6 +103,22 @@
           "lib/netstandard2.0/_._": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/6.0.35": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.35"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
         "type": "package",
         "dependencies": {
@@ -278,7 +294,8 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "MediatR": "12.4.0",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "6.0.35"
         },
         "compile": {
           "bin/placeholder/Contracts.dll": {}
@@ -292,7 +309,8 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "MediatR": "12.4.0",
-          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0"
+          "MediatR.Extensions.Microsoft.DependencyInjection": "11.1.0",
+          "Microsoft.EntityFrameworkCore.InMemory": "6.0.35"
         },
         "compile": {
           "bin/placeholder/Domain.dll": {}
@@ -410,6 +428,20 @@
         "lib/netstandard2.0/_._",
         "microsoft.entityframeworkcore.analyzers.7.0.0.nupkg.sha512",
         "microsoft.entityframeworkcore.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/6.0.35": {
+      "sha512": "0rfIHG+w4mT1wZSismgXWvXMI8lnYLUp0swhhO24N2Ju6eI+IoBc/20UcEpjQf7w4b3iybn2OBw9iI+q8C0qeA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/6.0.35",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.6.0.35.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
@@ -725,7 +757,8 @@
       "Domain >= 1.0.0",
       "MediatR >= 12.4.0",
       "MediatR.Extensions.Microsoft.DependencyInjection >= 11.1.0",
-      "Microsoft.EntityFrameworkCore >= 7.0.0"
+      "Microsoft.EntityFrameworkCore >= 7.0.0",
+      "Microsoft.EntityFrameworkCore.InMemory >= 6.0.35"
     ]
   },
   "packageFolders": {
@@ -787,6 +820,10 @@
           "Microsoft.EntityFrameworkCore": {
             "target": "Package",
             "version": "[7.0.0, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
+            "target": "Package",
+            "version": "[6.0.35, )"
           }
         },
         "imports": [
@@ -804,7 +841,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.132/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.135/RuntimeIdentifierGraph.json"
       }
     }
   },

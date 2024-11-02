@@ -1,9 +1,9 @@
 import {Item} from "@prisma/client";
 
 import {CreateItemRequest} from "../../../contracts/items/CreateItemRequest";
+import {UpdateItemRequest} from "../../../contracts/items/UpdateItemRequest";
 import prisma from "../../../prismaClient";
 import {BadRequestError} from "../_common/exceptions/BadRequestError";
-import {UpdateItemRequest} from "../../../contracts/items/UpdateItemRequest";
 
 class itemsService {
     async get(): Promise<Item[]> {
@@ -52,7 +52,7 @@ class itemsService {
         });
 
         if (!item) {
-            throw new BadRequestError("Item with provided Id was not found")
+            throw new BadRequestError("Item with provided Id was not found");
         }
 
         return await prisma.item.delete({
@@ -70,11 +70,11 @@ class itemsService {
         ]);
 
         if (!item) {
-            throw new BadRequestError("Item with provided Id was not found")
+            throw new BadRequestError("Item with provided Id was not found");
         }
 
         if(!user) {
-            throw new BadRequestError("User with provided Id does not exist")
+            throw new BadRequestError("User with provided Id does not exist");
         }
 
         return await await prisma.item.update({

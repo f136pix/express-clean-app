@@ -9,13 +9,10 @@ namespace Application.Clients.Queries.GetClientById;
 public class GetClientByIdQueryHandler : IRequestHandler<GetClientByIdQuery, Client>
 {
     private readonly IApplicationDbContext _dbContext;
-    private readonly IDapperConnectionFactory _connectionFactory;
 
-    public GetClientByIdQueryHandler(IApplicationDbContext applicationDbContext, IDapperConnectionFactory factory,
-        IDapperConnectionFactory connectionFactory)
+    public GetClientByIdQueryHandler(IApplicationDbContext applicationDbContext)
     {
         _dbContext = applicationDbContext;
-        _connectionFactory = connectionFactory;
     }
 
     public async Task<Client> Handle(GetClientByIdQuery request, CancellationToken cancellationToken)

@@ -2,6 +2,7 @@ version: '3.8'
 
 services:
   express-db:
+    container_name: 'express-db'
     image: postgres:latest
     environment:
       POSTGRES_DB: express
@@ -11,8 +12,11 @@ services:
       - "5436:5432"
     volumes:
       - pg-expressdata:/var/lib/postgresql/data
+    networks:
+      - common-net
   
   dotnet-db:
+    container_name: 'dotnet-db'
     image: postgres:latest
     environment:
       POSTGRES_DB: dotnet
@@ -23,21 +27,6 @@ services:
     volumes:
       - pg-dotnetdata:/var/lib/postgresql/data
   
-  
-#  express-api:
-#    build: .
-#    command: sh -c "while !</dev/tcp/db/5432; do sleep 1; done; npm start"
-#    environment:
-#      DB_HOST: db
-#      DB_PORT: 5432
-#      DB_USER: admin
-#      DB_PASSWORD: password!
-#      DB_NAME: express
-#    ports:
-#      - "5000:5000"
-#    depends_on:
-#      - express-db
-
   rabbitmq:
     image: rabbitmq:3-management-alpine
     container_name: 'rabbitmq'
@@ -47,7 +36,27 @@ services:
     volumes:
       - ~/.docker-conf/rabbitmq/data/:/var/lib/rabbitmq/
       - ~/.docker-conf/rabbitmq/log/:/var/log/rabbitmq
+    networks:
+        - common-net
+  
+  express:
+    container_name: 'express'
+    build:
+      context: ./express
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    depends_on:
+      - express-db
+      - rabbitmq
+    networks:
+      - common-net
 
 volumes:
   pg-expressdata:
   pg-dotnetdata:
+
+networks:
+  common-net: 
+    driver: bridge 
+    

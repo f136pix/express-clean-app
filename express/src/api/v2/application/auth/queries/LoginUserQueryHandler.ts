@@ -1,16 +1,18 @@
-import UserRepository from "../../../infraestructure/_common/persistance/repositories/UserRepository";
-import RoleRepository from "../../../infraestructure/_common/persistance/repositories/RolesRepository";
-import {ErrorOr} from "../../../infraestructure/_common/exceptions/ErrorOr";
-import {AuthResult} from "../../_common/auth/authResult";
-import {UserCreatedDomainEvent} from "../../../domain/UserAggregate/Events/UserCreated";
-import jwtService from "../../../../v1/_common/services/jwtService";
-import {Success} from "../../../infraestructure/_common/exceptions/defaultModels/Success";
-import {LoginUserQuery} from "./LoginUserQuery";
-import {NotFound} from "../../../infraestructure/_common/exceptions/defaultModels/NotFound";
-import {User} from "../../../domain/UserAggregate/User";
 import bcrypt from "bcrypt";
+
 import {UnauthorizedError} from "../../../../v1/_common/exceptions/UnauthorizedError";
+import jwtService from "../../../../v1/_common/services/jwtService";
+import {UserCreatedDomainEvent} from "../../../domain/UserAggregate/Events/UserCreated";
+import {User} from "../../../domain/UserAggregate/User";
+import {NotFound} from "../../../infraestructure/_common/exceptions/defaultModels/NotFound";
+import {Success} from "../../../infraestructure/_common/exceptions/defaultModels/Success";
 import {Unauthorized} from "../../../infraestructure/_common/exceptions/defaultModels/Unauthorized";
+import {ErrorOr} from "../../../infraestructure/_common/exceptions/ErrorOr";
+import RoleRepository from "../../../infraestructure/_common/persistance/repositories/RolesRepository";
+import UserRepository from "../../../infraestructure/_common/persistance/repositories/UserRepository";
+import {AuthResult} from "../../_common/auth/authResult";
+
+import {LoginUserQuery} from "./LoginUserQuery";
 
 class LoginUserQueryHandler {
     private readonly userRepository: typeof UserRepository;
@@ -39,7 +41,7 @@ class LoginUserQueryHandler {
         const returnData: AuthResult = {
             user: user,
             jwt: jwt
-        }
+        };
 
         return new Success(returnData);
     }

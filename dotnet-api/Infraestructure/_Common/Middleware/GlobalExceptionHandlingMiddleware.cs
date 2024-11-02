@@ -37,24 +37,24 @@ public class GlobalExceptionHandlingMiddleware
         switch (exception)
         {
             case ApplicationException ex:
-                exModel.responseCode = (int)HttpStatusCode.BadRequest;
+                exModel.ResponseCode = (int)HttpStatusCode.BadRequest;
                 response.StatusCode = (int)HttpStatusCode.BadRequest;
-                exModel.responseMessage = "Application Exception occurred, Please try again later";
+                exModel.ResponseMessage = "Application Exception occurred, Please try again later";
                 break;
             case NotFoundException ex:
-                exModel.responseCode = (int)HttpStatusCode.BadRequest;
+                exModel.ResponseCode = (int)HttpStatusCode.BadRequest;
                 response.StatusCode = (int)HttpStatusCode.BadRequest;
-                exModel.responseMessage = ex.Message;
+                exModel.ResponseMessage = ex.Message;
                 break;
             case AlreadyExistsException ex:
-                exModel.responseCode = (int)HttpStatusCode.BadRequest;
+                exModel.ResponseCode = (int)HttpStatusCode.BadRequest;
                 response.StatusCode = (int)HttpStatusCode.BadRequest;
-                exModel.responseMessage = ex.Message;
+                exModel.ResponseMessage = ex.Message;
                 break;
             default:
-                exModel.responseCode = (int)HttpStatusCode.InternalServerError;
+                exModel.ResponseCode = (int)HttpStatusCode.InternalServerError;
                 response.StatusCode = (int)HttpStatusCode.InternalServerError;
-                exModel.responseMessage = "Internal Server Error, Please try again later";
+                exModel.ResponseMessage = "Internal Server Error, Please try again later";
                 break;
         }
 

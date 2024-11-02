@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "wXz1Dn9wHcxPFpQitb2KqfjFVecB2C4ZRV1EqBAyILdhWRJkZqKU/WmvUTuBpYGdELCLnlkmZHmK1aPNGz+zPQ==",
+  "dgSpecHash": "Dh1oNyBZDM651dBShOvkxKiAFWxDcVpxqIJrTMjjCgW13Bg3I+/VFqoprD5+o/JwvxYLgtBcDJB7qI4CBGnpjg==",
   "success": true,
   "projectFilePath": "/home/filipe/Desktop/express-clean-app/dotnet-api/Application/Application.csproj",
   "expectedPackageFiles": [
@@ -11,6 +11,7 @@
     "/home/filipe/.nuget/packages/microsoft.entityframeworkcore/7.0.0/microsoft.entityframeworkcore.7.0.0.nupkg.sha512",
     "/home/filipe/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.0/microsoft.entityframeworkcore.abstractions.7.0.0.nupkg.sha512",
     "/home/filipe/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.0/microsoft.entityframeworkcore.analyzers.7.0.0.nupkg.sha512",
+    "/home/filipe/.nuget/packages/microsoft.entityframeworkcore.inmemory/6.0.35/microsoft.entityframeworkcore.inmemory.6.0.35.nupkg.sha512",
     "/home/filipe/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "/home/filipe/.nuget/packages/microsoft.extensions.caching.memory/7.0.0/microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "/home/filipe/.nuget/packages/microsoft.extensions.dependencyinjection/7.0.0/microsoft.extensions.dependencyinjection.7.0.0.nupkg.sha512",

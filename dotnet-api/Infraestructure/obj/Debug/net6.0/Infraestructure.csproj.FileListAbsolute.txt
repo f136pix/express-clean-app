@@ -68,3 +68,4 @@
 /home/filipe/Desktop/express-clean-app/dotnet-api/Infraestructure/obj/Debug/net6.0/ref/Infraestructure.dll
 /home/filipe/Desktop/express-clean-app/dotnet-api/Infraestructure/obj/Debug/net6.0/Infraestructure.pdb
 /home/filipe/Desktop/express-clean-app/dotnet-api/Infraestructure/obj/Debug/net6.0/Infraestructure.genruntimeconfig.cache
+/home/filipe/Desktop/express-clean-app/dotnet-api/Infraestructure/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll

@@ -1,7 +1,8 @@
-import prismaClient from "../../../../../../prismaClient";
 import {PrismaClient} from "@prisma/client";
-import {Role} from "../../../../domain/UserAggregate/Role";
+
+import prismaClient from "../../../../../../prismaClient";
 import {Permission} from "../../../../domain/UserAggregate/Permission";
+import {Role} from "../../../../domain/UserAggregate/Role";
 
 class RoleRepository {
     private prisma: PrismaClient;
@@ -21,10 +22,10 @@ class RoleRepository {
             include: {
                 permissions: true
             }
-        })
+        });
 
         return role;
-    };
+    }
 
     async findRoleById(roleId: number): Promise<Role | null> {
         const prismaRole = await this.prisma.role.findUnique({
@@ -33,11 +34,11 @@ class RoleRepository {
         });
 
         if(!prismaRole) return null;
-        const permissionsList: Permission[] | undefined = []
+        const permissionsList: Permission[] | undefined = [];
 
         prismaRole.permissions.forEach((permission) => {
-            permissionsList.push(Permission.mapToDomain(permission))
-        })
+            permissionsList.push(Permission.mapToDomain(permission));
+        });
 
         return new Role(prismaRole.id, prismaRole.name, permissionsList ? permissionsList : undefined);
     }

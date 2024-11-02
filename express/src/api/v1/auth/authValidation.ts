@@ -17,5 +17,5 @@ export const authSignin = Joi.object().keys({
 
 export const roleSchema = Joi.object().keys({
     role: Joi.string().required(),
-})
+});
 
