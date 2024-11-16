@@ -7,13 +7,13 @@ architecture, with the service layer treating the business and models logic.
 
 > Register user flow example ignoring the auth/ validation middlewares
 
-![img_2.png](img_2.png)
+![img_4.png](img_4.png)
 
 The `/V2` API contains a more complex logic, bringing some implementations based on DDD and Clean Architecture.
 
 > Register user flow example ignoring the auth/ validation middlewares
 
-![img_1.png](img_1.png)
+![img_3.png](img_3.png)
 
 ## Eslint
 

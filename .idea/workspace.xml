@@ -6,13 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a52dcb17-74cc-4098-93b1-11fad1f1c05b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/.env" beforeDir="false" afterPath="$PROJECT_DIR$/express/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/express/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/auth/authController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/auth/authController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v1/auth/authService.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v1/auth/authService.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/api/v2/infraestructure/auth/controllers/AuthController.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/api/v2/infraestructure/auth/controllers/AuthController.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/express/src/contracts/auth/RegisterUserRequest.ts" beforeDir="false" afterPath="$PROJECT_DIR$/express/src/contracts/auth/RegisterUserRequest.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +46,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "npm.dev.executor": "Run",
-    "ts.external.directory.path": "C:\\Users\\felipe.cinel\\Desktop\\express-clean-app\\express\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "/home/filipe/Desktop/express-clean-app/express/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -79,7 +72,9 @@
       <method v="2" />
     </configuration>
     <configuration default="true" type="docker-deploy" factoryName="dockerfile" temporary="true">
-      <deployment type="dockerfile" />
+      <deployment type="dockerfile">
+        <settings />
+      </deployment>
       <method v="2" />
     </configuration>
     <configuration name="docker-compose.yml.express-app: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
